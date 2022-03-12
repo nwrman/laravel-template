@@ -15,3 +15,6 @@ yarn-error.log
 /.vscode
 /draft.yaml
 /.blueprint
+.php-cs-fixer.php
+.php-cs-fixer.cache
+phpstan.neon

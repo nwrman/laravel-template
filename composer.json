@@ -16,20 +16,24 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "thecodingmachine/safe": "^2.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
         "fakerphp/faker": "^1.9.1",
         "fidum/laravel-blueprint-pestphp-addon": "^2.2",
+        "friendsofphp/php-cs-fixer": "^3.7",
         "laravel-shift/blueprint": "^2.3",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
+        "nunomaduro/larastan": "^2.0",
         "pestphp/pest-plugin-laravel": "^1.2",
         "pestphp/pest-plugin-parallel": "^1.0",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "spatie/laravel-ignition": "^1.0",
+        "thecodingmachine/phpstan-safe-rule": "^1.2"
     },
     "autoload": {
         "psr-4": {
@@ -58,6 +62,15 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "lint": "./vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "test:lint": "./vendor/bin/php-cs-fixer fix --dry-run  --allow-risky=yes",
+        "test:types": "./vendor/bin/phpstan analyse",
+        "test:unit": "./vendor/bin/pest -p",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
         ]
     },
     "extra": {
