@@ -6627,6 +6627,17 @@
         {
                         \Illuminate\Filesystem\Filesystem::flushMacros();
         }
+                    /**
+         * 
+         *
+         * @see \Blueprint\FileMixins::stub()
+         * @param mixed $path
+         * @static 
+         */ 
+        public static function stub($path)
+        {
+                        return \Illuminate\Filesystem\Filesystem::stub($path);
+        }
          
     }
             /**
@@ -16543,6 +16554,28 @@
      
 }
 
+    namespace Illuminate\Filesystem { 
+            /**
+     * 
+     *
+     */ 
+        class Filesystem {
+                    /**
+         * 
+         *
+         * @see \Blueprint\FileMixins::stub()
+         * @param mixed $path
+         * @static 
+         */ 
+        public static function stub($path)
+        {
+                        return \Illuminate\Filesystem\Filesystem::stub($path);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -16606,6 +16639,29 @@
         public static function hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
         {
                         return \Illuminate\Http\Request::hasValidSignatureWhileIgnoring($ignoreQuery, $absolute);
+        }
+         
+    }
+     
+}
+
+    namespace Illuminate\Testing { 
+            /**
+     * 
+     *
+     * @mixin \Illuminate\Http\Response
+     */ 
+        class TestResponse {
+                    /**
+         * 
+         *
+         * @see \JMac\Testing\AdditionalAssertionsServiceProvider::register()
+         * @param array $structure
+         * @static 
+         */ 
+        public static function assertJsonTypedStructure($structure)
+        {
+                        return \Illuminate\Testing\TestResponse::assertJsonTypedStructure($structure);
         }
          
     }
