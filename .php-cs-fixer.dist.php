@@ -19,6 +19,7 @@ $rules = [
     'php_unit_method_casing' => ['case' => 'snake_case'],
     'phpdoc_no_empty_return' => false,
     'yoda_style' => false,
+    'single_quote' => true,
 ];
 
 return (new PhpCsFixer\Config())

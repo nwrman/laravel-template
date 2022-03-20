@@ -11,7 +11,7 @@ return [
     'timezone' => 'America/Mexico_City',
     'locale' => 'es',
     'fallback_locale' => 'en',
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'es_ES',
     'key' => env('APP_KEY'),
     'cipher' => 'AES-256-CBC',
     'providers' => [
