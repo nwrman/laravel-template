@@ -20,6 +20,9 @@ $rules = [
     'phpdoc_no_empty_return' => false,
     'yoda_style' => false,
     'single_quote' => true,
+    'trailing_comma_in_multiline' => [
+        'elements' => ['arrays', 'arguments', 'parameters'],
+    ],
 ];
 
 return (new PhpCsFixer\Config())
