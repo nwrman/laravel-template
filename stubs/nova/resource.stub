@@ -1,0 +1,34 @@
+<?php
+
+namespace {{ namespace }};
+
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Http\Requests\NovaRequest;
+
+class {{ class }} extends Resource
+{
+    public static string $model = \{{ namespacedModel }}::class;
+
+    public static $globallySearchable = false;
+
+    public static $title = 'id';
+
+    public static $search = [];
+
+    public static function label(): string
+    {
+        return '{{ class }}s';
+    }
+
+    public static function singularLabel(): string
+    {
+        return '{{ class }}';
+    }
+
+    public function fields(NovaRequest $request): array
+    {
+        return [
+            ID::make()->sortable(),
+        ];
+    }
+}
