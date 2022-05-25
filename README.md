@@ -6,6 +6,10 @@ Create a new project with composer:
 
     composer create-project nwrman/laravel-template my-new-project dev-master
 
+After pulling the project dont't forget to update dependencies
+
+    composer update
+
 Generate model ide helpers
 
     composer model-helpers 
