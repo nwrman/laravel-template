@@ -2,9 +2,13 @@
 
 This is an opinionated Laravel template that includes the following:
 
-Always generate models via a mixin
+Create a new project with composer:
 
-    php artisan ide-helper:models --write-mixin (-M) "App\Models\Post" 
+    composer create-project nwrman/laravel-template my-new-project dev-master
+
+Generate model ide helpers
+
+    composer model-helpers 
 
 
 ## Toolset
