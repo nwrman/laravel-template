@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
     |--------------------------------------------------------------------------
     | Application Namespace
@@ -128,7 +129,7 @@ return [
     */
     'generators' => [
         'controller' => \Blueprint\Generators\ControllerGenerator::class,
-        'factory' => \Blueprint\Generators\FactoryGenerator::class,
+        'factory' => Blueprint\Generators\FactoryGenerator::class,
         'migration' => \Blueprint\Generators\MigrationGenerator::class,
         'model' => \Blueprint\Generators\ModelGenerator::class,
         'route' => \Blueprint\Generators\RouteGenerator::class,
@@ -142,5 +143,4 @@ return [
         'resource' => \Blueprint\Generators\Statements\ResourceGenerator::class,
         'view' => \Blueprint\Generators\Statements\ViewGenerator::class,
     ],
-
 ];

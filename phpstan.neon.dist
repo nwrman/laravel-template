@@ -7,10 +7,12 @@ parameters:
     paths:
     - app
     - database
-    - config
 
     scanFiles:
     - _ide_helper_models.php
+
+    excludePaths:
+    - database/migrations
 
     # The level 9 is the highest level
     level: 8

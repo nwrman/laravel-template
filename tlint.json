@@ -1,0 +1,10 @@
+{
+  "preset": "laravel",
+  "disabled": [],
+  "excluded": ["bootstrap/"],
+  "paths": [
+    {
+
+    }
+  ]
+}

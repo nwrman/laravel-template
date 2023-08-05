@@ -14,11 +14,23 @@ Generate model ide helpers
 
     composer model-helpers 
 
+Lint everything
+
+    composer lint
+
+Lint only modified files
+
+    composer lint --dirty
+
+Make sure that everything is ok
+
+    composer test
 
 ## Toolset
 
 The created application is configured with the following tools:
 
+- [Duster](https://github.com/tighten/duster)
 - [Pest PHP](https://pestphp.com)
 - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
 - [LaraStan](https://github.com/nunomaduro/larastan)
